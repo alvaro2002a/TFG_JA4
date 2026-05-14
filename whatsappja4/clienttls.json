@@ -1,0 +1,28 @@
+{
+  "log": {
+    "level": "info"
+  },
+  "inbounds": [
+    {
+      "type": "socks",
+      "listen": "127.0.0.1",
+      "listen_port": 1080
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "proxy",
+      "server": "127.0.0.1",
+      "server_port": 5050,
+      "uuid": "8ba723f5-4c41-47c8-9e60-d2f1837ac519"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "outbound": "proxy"
+      }
+    ]
+  }
+}
